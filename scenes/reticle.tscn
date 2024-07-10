@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d04bguk546yh4"]
+
+[ext_resource type="Texture2D" uid="uid://dkdl1ww3jsxut" path="res://assets/reticle.png" id="1_q2jum"]
+
+[node name="reticle" type="Node2D"]
+
+[node name="reticle_sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_q2jum")

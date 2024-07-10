@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkaow6gs78whp"]
+
+[ext_resource type="PackedScene" uid="uid://cr2r1ud3j5f23" path="res://scenes/guy.tscn" id="1_hbrjn"]
+[ext_resource type="Script" path="res://scripts/death_handler.gd" id="1_hfija"]
+[ext_resource type="PackedScene" uid="uid://cf6fqmmktjy21" path="res://scenes/f22.tscn" id="2_ilby5"]
+[ext_resource type="PackedScene" uid="uid://dwhyck326dfoc" path="res://scenes/block.tscn" id="3_jnf5c"]
+[ext_resource type="PackedScene" uid="uid://d04bguk546yh4" path="res://scenes/reticle.tscn" id="5_8oyll"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_hfija")
+
+[node name="guy" parent="." instance=ExtResource("1_hbrjn")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="f22" parent="." instance=ExtResource("2_ilby5")]
+
+[node name="level" type="Node2D" parent="."]
+
+[node name="Block" parent="level" instance=ExtResource("3_jnf5c")]
+
+[node name="Block2" parent="level" instance=ExtResource("3_jnf5c")]
+position = Vector2(10, 5)
+
+[node name="Block3" parent="level" instance=ExtResource("3_jnf5c")]
+position = Vector2(20, 5)
+
+[node name="Block4" parent="level" instance=ExtResource("3_jnf5c")]
+position = Vector2(30, 5)
+
+[node name="Block5" parent="level" instance=ExtResource("3_jnf5c")]
+position = Vector2(40, 5)
+
+[node name="Block6" parent="level" instance=ExtResource("3_jnf5c")]
+position = Vector2(50, 5)
+
+[node name="Block7" parent="level" instance=ExtResource("3_jnf5c")]
+position = Vector2(60, 5)
+
+[node name="Block8" parent="level" instance=ExtResource("3_jnf5c")]
+position = Vector2(70, 5)
+
+[node name="Block9" parent="level" instance=ExtResource("3_jnf5c")]
+position = Vector2(208, -50)
+
+[node name="Block10" parent="level" instance=ExtResource("3_jnf5c")]
+position = Vector2(218, -50)
+
+[node name="Block11" parent="level" instance=ExtResource("3_jnf5c")]
+position = Vector2(228, -50)
+
+[node name="Block12" parent="level" instance=ExtResource("3_jnf5c")]
+position = Vector2(238, -50)
+
+[node name="Block13" parent="level" instance=ExtResource("3_jnf5c")]
+position = Vector2(431, 36)
+
+[node name="Block14" parent="level" instance=ExtResource("3_jnf5c")]
+position = Vector2(441, 36)
+
+[node name="Block15" parent="level" instance=ExtResource("3_jnf5c")]
+position = Vector2(451, 36)
+
+[node name="Block16" parent="level" instance=ExtResource("3_jnf5c")]
+position = Vector2(461, 36)
+
+[node name="reticle" parent="." instance=ExtResource("5_8oyll")]

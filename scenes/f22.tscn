@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://cf6fqmmktjy21"]
+
+[ext_resource type="Texture2D" uid="uid://dy61xtsb8qnmr" path="res://assets/f22.png" id="2_cdva5"]
+[ext_resource type="Script" path="res://scripts/f22_shooting.gd" id="2_pvqgo"]
+[ext_resource type="Script" path="res://scripts/f22_movement.gd" id="3_mex47"]
+[ext_resource type="PackedScene" uid="uid://dyftg0fhoeibb" path="res://scenes/aim9.tscn" id="4_d8ylm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vs4l3"]
+atlas = ExtResource("2_cdva5")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6ti7"]
+atlas = ExtResource("2_cdva5")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilfhy"]
+atlas = ExtResource("2_cdva5")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cycbm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vs4l3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6ti7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilfhy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="f22" type="Node2D"]
+position = Vector2(-253, 0)
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_cycbm")
+
+[node name="shooting" type="Node2D" parent="."]
+script = ExtResource("2_pvqgo")
+
+[node name="movement" type="Node2D" parent="."]
+script = ExtResource("3_mex47")
+
+[node name="aim9" parent="." instance=ExtResource("4_d8ylm")]
+position = Vector2(-12, 3.5)
